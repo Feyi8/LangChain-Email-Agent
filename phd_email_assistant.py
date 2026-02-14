@@ -41,15 +41,15 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 SENDER_EMAIL   = os.getenv("SENDER_EMAIL")
 EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
 
-RECEIVER_EMAIL = "Michael.Zhang@smu.ca"
-SCHOLAR_URL    = "https://scholar.google.com/citations?user=RHcPtfkAAAAJ&hl=en"
-SMU_URL        = "https://www.smu.ca/researchers/sobey/profiles/michael-zhang.html"
+RECEIVER_EMAIL = "add_your_email"
+SCHOLAR_URL    = "add_your_weblink"
+SMU_URL        = "add_your_weblink"
 
-YOUR_NAME      = "Feyi Osideinde"               
-YOUR_PROGRAM   = "Master of Business Analytics"   
-YOUR_INTERESTS = "AI in Business/Finance and Supply Chain & Operations AI"
-YOUR_CONTACT   = "Oluwafeyikemi.osideinde@smu.ca"   
-YOUR_LINKEDIN  = "Feyiosideinde@linkedIn.ca"            
+YOUR_NAME      = "[Insert_name]"               
+YOUR_PROGRAM   = "[Insert_program]"  
+YOUR_INTERESTS = "[Insert_interests]"
+YOUR_CONTACT   = "[Insert_contact]"   
+YOUR_LINKEDIN  = "[Insert_linkedIn]"           
 
 
 # =============================================================================
@@ -151,7 +151,7 @@ def scrape_with_selenium(url: str) -> dict:
 
 def scrape_smu_profile(url: str) -> dict:
     """
-    Fallback: scrape Professor Zhang's SMU faculty page using requests + BS4.
+    Fallback: scrape receiver's SMU faculty page using requests + BS4.
     Professor confirmed this is also an acceptable source.
     """
     headers = {"User-Agent": "Mozilla/5.0"}
@@ -179,7 +179,7 @@ def scrape_smu_profile(url: str) -> dict:
 @tool
 def scrape_scholar_profile(url: str) -> str:
     """
-    Scrape Professor Michael Zhang's academic profile.
+    Scrape receiver's academic profile.
     Primary: Google Scholar (Selenium).
     Fallback: SMU faculty page (requests + BS4) if Scholar data is empty.
 
