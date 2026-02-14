@@ -1,6 +1,6 @@
 # Environment files
 .env
-.env_phd_example
+.env_phd.example
 config.py
 
 # Python cache
@@ -10,3 +10,4 @@ __pycache__/
 # OS files
 
 .DS_Store
+
